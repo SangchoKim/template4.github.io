@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Lora', 'Nanum Gothic', serif;
   font-size: 1.125rem;
   color: {{ site.text-col | default: "#404040" }};
   position: relative;
@@ -130,6 +130,7 @@ img {
     background-image: url({{ site.navbar-img | relative_url }});
     background-attachment: fixed;
   {% endif %}
+  padding: 0 8rem;
   -webkit-transition: padding .5s ease-in-out;
   -moz-transition: padding .5s ease-in-out;
   transition: padding .5s ease-in-out;
@@ -493,6 +494,7 @@ footer .footer-custom-content {
 }
 .post-heading .post-meta {
   display: inline-block;
+  margin-top: 1.5rem;
 }
 @media (max-width: 767px) {
   .post-heading .post-meta {
@@ -1023,41 +1025,41 @@ pre {
   display: none;
   z-index: 999999;
   position: fixed;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.7);
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   text-align: center;
-  padding: 1rem;
+  padding: 5rem;
 }
 #nav-search-exit {
-  position: absolute;
-  top: 1.5rem;
-  cursor: pointer;
-  right: 25%;
-  margin-right: 2rem;
-  color: #555;
-  font-size: 2rem;
-  line-height: 2rem;
-  font-weight: bold;
+    position: absolute;
+    top: 5.6rem;
+    cursor: pointer;
+    right: 29%;
+    color: #000;
+    opacity: 0.5;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: bold;
 }
 #nav-search-exit:hover {
   color: #000;
 }
 #nav-search-input {
-  text-align: center;
+  /* text-align: center; */
   background: #e7edee;
   margin: auto;
   display: block;
-  font-size: 2rem;
+  font-size: 1.3rem;
   width: 50%;
   transition: width 300ms ease;
   color: #222;
   border-radius: 5rem;
   outline: none;
-  border: none;
-  padding: 0 3rem;
+  border: 1px solid #222;
+  padding: 0.5rem 3rem;
 }
 @media (max-width: 1199px) {
   #nav-search-input {
@@ -1077,12 +1079,13 @@ pre {
 }
 #nav-search-input:focus {
   background: #f3f8fe;
-  box-shadow: 0px 0.15rem 1rem #e7f4ff;
+  /* box-shadow: 0px 0.15rem 1rem #e7f4ff; */
   outline: none;
 }
 
 #nav-search-input::placeholder {
-  color: #777;
+  color: #000;
+  opacity: 0.5;
 }
 
 #search-results-container {
